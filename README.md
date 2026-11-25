@@ -190,25 +190,6 @@ link-shortener/
 └── active_slot.txt            # Tracks which slot is live
 ```
 
----
-
-## How to explain it in an interview
-
-> "I built a URL shortener from scratch using Node.js and PostgreSQL, then containerised it with Docker and set up a blue-green deployment pipeline. The app runs as two identical containers behind Nginx — when I deploy a new version, a script builds the idle container, health-checks it, then reloads Nginx to flip the traffic with zero downtime. I also implemented automatic rollback by keeping the previous container warm."
-
----
-
-## Optional enhancements
-
-- [ ] Custom aliases — let users set their own short code
-- [ ] Link expiry — `expires_at` column, return 410 Gone
-- [ ] QR code generation
-- [ ] Rate limiting with `express-rate-limit`
-- [ ] GitHub Actions CI — run `./deploy.sh` on push to main
-- [ ] Auth — protect the dashboard with an API key
-
----
-
 ## License
 
 MIT
